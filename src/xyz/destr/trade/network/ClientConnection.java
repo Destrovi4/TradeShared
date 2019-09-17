@@ -90,6 +90,10 @@ public class ClientConnection implements UserHandler {
 		writeThread.start();
 		readThread.start();
 	}
+	
+	public void setUserController(UserController userController) {
+		this.userController = userController;
+	}
 
 	public void stop() {
 		if(!socket.isClosed()) {
